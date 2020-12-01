@@ -40,6 +40,7 @@ public class UserDaoJDBCImpl implements UserDao {
         Statement statement = connection.createStatement();
         String sql = "INSERT INTO users (name, lastname, age) " + "VALUES ('"+ name +"', '" + lastName + "', " + age + ")";
         statement.executeUpdate(sql);
+        System.out.println("User с именем – " + name + " добавлен в базу данных");
     }
 
     public void removeUserById(long id) throws SQLException, ClassNotFoundException {
